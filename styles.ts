@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
     },
     text: {
       textAlign: 'center'
+    },
+    button: {
+      minWidth: 20
     }
 });
 

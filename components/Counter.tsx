@@ -13,9 +13,23 @@ export function Counter(props: CounterProps){
         <View style={{
             gap: 3
         }}>
-            <Text style={styles.text}>{props.value}</Text>
-            <Button title="Increment" onPress={props.handleIncrement} />
-            <Button title="Decrement" onPress={props.handleDecrement} />
+            <View style={{
+                flexDirection: 'row',
+                gap: 5,
+                alignItems: 'center',
+                justifyContent: 'center',
+                flex: 1,
+                borderColor: 'black',
+                borderWidth: 1,
+                borderRadius: 5,
+            }}>
+                <Button title="-" onPress={props.handleDecrement} />
+                <Text style={[{
+                    width: 50,
+                    paddingHorizontal: 10,
+                }, styles.text]}>{props.value}</Text>
+                <Button title="+" onPress={props.handleIncrement}/>
+            </View>
             <Button title="Pass value" onPress={props.handlePassValue} />
         </View>
     )
