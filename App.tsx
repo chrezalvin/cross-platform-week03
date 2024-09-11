@@ -64,7 +64,10 @@ export default function App() {
         value={text}
         onChangeText={setText}
         placeholder="Enter your name"
-        style={styles.text}
+        style={[
+          styles.inputStyle,
+          styles.text
+        ]}
       />
     </View>
   );

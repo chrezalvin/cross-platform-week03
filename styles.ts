@@ -8,6 +8,14 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       gap: 8
     },
+    inputStyle: {
+      height: 40,
+      borderColor: 'gray',
+      borderWidth: 1,
+      width: 200,
+      textAlign: 'center',
+      borderRadius: 5,
+    },
     text: {
       textAlign: 'center'
     }
