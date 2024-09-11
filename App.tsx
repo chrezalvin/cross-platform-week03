@@ -11,6 +11,10 @@ interface Person {
   age: number;
 }
 
+function capitalize(str: string){
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export default function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState('');
@@ -24,12 +28,20 @@ export default function App() {
     setCount(count - 1);
   }
 
+  const resetState = () => {
+    setCount(0);
+    setText('');
+  }
+
   const handlePassValue = () => {
-    if(text !== '' && count > 0)
+    if(text !== ''){
       setPerson({
-        name: text,
+        name: capitalize(text),
         age: count
       });
+
+      resetState();
+    }
   }
 
   return (
